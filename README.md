@@ -2,9 +2,13 @@
   docker run -p 9092:9092 apache/kafka:3.9.0
 
 - Create a topic :
+  
   docker ps
+  
   docker exec -it [A REMPLACER PAR LE VOTRE] /bin/bash
+  
 cd /opt/kafka/bin
+
 sh kafka-topics.sh --bootstrap-server localhost:9092 --create --topic my-first-topic --partitions 1 --replication-factor 1
 
 - Producce a message :
